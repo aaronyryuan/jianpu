@@ -72,7 +72,7 @@
         {
             "glyph": ".",
             "jianpu representation": "dot next to node",
-            "definition": "hold for another half beat"
+            "definition": "hold for another half of beat value"
         },
         {
             "glyph": "/",
