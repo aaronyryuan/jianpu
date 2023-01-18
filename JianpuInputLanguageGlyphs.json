@@ -72,12 +72,17 @@
         {
             "glyph": ".",
             "jianpu representation": "dot next to node",
-            "definition": "hold for another half of beat value"
+            "definition": "hold for another half of note duration"
         },
         {
             "glyph": "/",
-            "jianpu representation": "line above note",
-            "definition": "halve the time duration"
+            "jianpu representation": "horizontal line above or below note",
+            "definition": "halve the note duration"
+        },
+        {
+            "glyph": "?",
+            "jianpu representation": "triplet marking",
+            "definition": "third the note duration"
         },
         {
             "glyph": "t",

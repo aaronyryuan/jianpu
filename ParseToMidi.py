@@ -2,6 +2,7 @@
 
 from typing import List
 from midiutil import MIDIFile
+import re
 
 basePitch = 68
 tempo = 80
@@ -28,36 +29,41 @@ class Note:
         self.tiesNext = tiesNext
 
 def glyphsToNote(glyphs: str) -> Note:
-    pitch, duration, hold, isRest, tiesNext = basePitch, 1, 0, False, False
+    pitch, duration, beatHolds = basePitch, 1, 0
+    countDotHolds, dotHoldRatio = 0, 0
+    isRest, tiesNext = False, False
     for glyph in glyphs:
         if glyph in pitchOffset:
             pitch += pitchOffset[glyph]
         elif glyph == '>':
-            hold += 1
+            beatHolds += 1
         elif glyph == '.':
-            hold += .5
+            countDotHolds += 1
+            dotHoldRatio += 1/(2**countDotHolds)
         elif glyph == "/":
             duration /= 2
+        elif glyph == "?":
+            duration /= 3
         elif glyph == '0':
             isRest = True
         elif glyph == 't':
             tiesNext = True
-    return Note(pitch, duration + hold, 100, isRest, tiesNext)
+    return Note(pitch, duration + beatHolds + duration * dotHoldRatio, 100, isRest, tiesNext)
 
 def smooshTies(time:int, tiedNotes:List[Note]) -> List[Note]:
-    notes = tiedNotes[0]
+    notes = [tiedNotes[0]]
     for note in tiedNotes[1:]:
         if notes[-1].pitch != note.pitch:
             notes += [note]
         else:
-            note[-1].duration += note.duration
+            notes[-1].duration += note.duration
     return notes
 
 def getWordsFromFile(fileName:str) -> List[str]:
-    file = open(fileName, 'r')
-    data = file.read()
-    wordList = data.replace("\n", " ").split(" ")
-    return wordList
+    with open(fileName, 'r') as file:
+        data = file.read()
+        strippedData = re.sub(r"[\n\t\s]*", "", data)
+        return re.findall("\d\D*", strippedData)
 
 def writeNotesToMidi(notes:List[Note], midifile:MIDIFile):
     time = 0
@@ -69,7 +75,7 @@ def writeNotesToMidi(notes:List[Note], midifile:MIDIFile):
                 tiedNotes += [note]
         elif tiedNotes:
             tiedNotes += [note]
-            for tiedNote in smooshTies(tiedNotes):
+            for tiedNote in smooshTies(time, tiedNotes):
                 midifile.addNote(0, 0, tiedNote.pitch, time, tiedNote.duration, tiedNote.volume)
                 time += tiedNote.duration
             tiedNotes = []
