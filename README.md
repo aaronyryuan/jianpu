@@ -23,13 +23,13 @@ jp inputs start with a numeral, followed by whatever modifications. Each modific
 mappings:
 - numerals: `{0, 1, 2, 3, 4, 5, 6, 7}`
   - rest, do, re, mi ...
-- pitch modifiers: `{+, -, #, b}`
-  - `+` in place of dot above
-  - `-` in place of dot below
+- pitch modifiers: `{', ,, #, b}`
+  - `'` in place of dot above
+  - `,` in place of dot below
   - `#` sharp
   - `b` flat
-- duration modifiers: `{>, ., /, ?, t}`
-  - `>` in place of dash to the side
+- duration modifiers: `{-, ., /, ?, t}`
+  - `-` in place of dash to the side
   - `.` in place of dot to the side
   - `/` in place of line above/below
   - `?` in place of triplet line above/below

@@ -3,21 +3,22 @@
 from typing import List
 from midiutil import MIDIFile
 import re
+import jpglyphs
 
 basePitch = 68
 tempo = 80
 pitchOffset = {
-    "1": 0,
-    "2": 2,
-    "3": 4,
-    "4": 5,
-    "5": 7,
-    "6": 9,
-    "7": 11,
-    "+": 12,
-    "-": -12,
-    "#": 1,
-    "b": -1
+    jpglyphs.do: 0,
+    jpglyphs.re: 2,
+    jpglyphs.mi: 4,
+    jpglyphs.fa: 5,
+    jpglyphs.so: 7,
+    jpglyphs.la: 9,
+    jpglyphs.ti: 11,
+    jpglyphs.octaveUp: 12,
+    jpglyphs.octaveDown: -12,
+    jpglyphs.sharp: 1,
+    jpglyphs.flat: -1
 }
 
 class Note:
@@ -35,18 +36,18 @@ def glyphsToNote(glyphs: str) -> Note:
     for glyph in glyphs:
         if glyph in pitchOffset:
             pitch += pitchOffset[glyph]
-        elif glyph == '>':
+        elif glyph == jpglyphs.holdDash:
             beatHolds += 1
-        elif glyph == '.':
+        elif glyph == jpglyphs.holdDot:
             countDotHolds += 1
             dotHoldRatio += 1/(2**countDotHolds)
-        elif glyph == "/":
+        elif glyph == jpglyphs.halveBeat:
             duration /= 2
-        elif glyph == "?":
+        elif glyph == jpglyphs.thirdBeat:
             duration /= 3
-        elif glyph == '0':
+        elif glyph == jpglyphs.rest:
             isRest = True
-        elif glyph == 't':
+        elif glyph == jpglyphs.tieNext:
             tiesNext = True
     return Note(pitch, duration + beatHolds + duration * dotHoldRatio, 100, isRest, tiesNext)
 
