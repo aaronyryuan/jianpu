@@ -1,0 +1,115 @@
+{
+    "notes": [
+        {
+            "glyph": "0",
+            "jianpu representation": "0",
+            "western definition": "rest"
+        },
+        {
+            "glyph": "1",
+            "jianpu representation": "1",
+            "western definition": "ionian do"
+        },
+        {
+            "glyph": "2",
+            "jianpu representation": "2",
+            "western definition": "ionian re"
+        },
+        {
+            "glyph": "3",
+            "jianpu representation": "3",
+            "western definition": "ionian mi"
+        },
+        {
+            "glyph": "4",
+            "jianpu representation": "4",
+            "western definition": "ionian fa"
+        },
+        {
+            "glyph": "5",
+            "jianpu representation": "5",
+            "western definition": "ionian so"
+        },
+        {
+            "glyph": "6",
+            "jianpu representation": "6",
+            "western definition": "ionian la"
+        },
+        {
+            "glyph": "7",
+            "jianpu representation": "7",
+            "western definition": "ionian ti"
+        }
+    ],
+    "note pitch modifiers":[
+        {
+            "glyph": "#",
+            "jianpu representation": "#",
+            "western definition": "sharp"
+        },
+        {
+            "glyph": "b",
+            "jianpu representation": "b",
+            "western definition": "flat"
+        },
+        {
+            "glyph": "+",
+            "jianpu representation": "dot above note",
+            "western definition": "octave up"
+        },
+        {
+            "glyph": "-",
+            "jianpu representation": "dot below note",
+            "western definition": "octave down"
+        }
+    ],
+    "note duration modifiers": [
+        {
+            "glyph": ">",
+            "jianpu representation": "dash centered on beat",
+            "western definition": "hold for another beat"
+        },
+        {
+            "glyph": ".",
+            "jianpu representation": "dot next to node",
+            "western definition": "hold for another half beat"
+        },
+        {
+            "glyph": "/",
+            "jianpu representation": "line above note",
+            "western definition": "halve the time duration"
+        },
+        {
+            "glyph": "t",
+            "jianpu representation": "tie",
+            "western definition": "tie"
+        }
+    ],
+    "control structures": [
+        {
+            "glyph": ",",
+            "jianpu representation": "bar line",
+            "western definition": "bar line"
+        },
+        {
+            "glyph": "|:",
+            "jianpu representation": "start repeat",
+            "western definition": "start repeat"
+        },
+        {
+            "glyph": ":|",
+            "jianpu representation": "end repeat",
+            "western definition": "end repeat"
+        },
+        {
+            "glyph": "[",
+            "jianpu representation": "start repeat ending section",
+            "western definition": "start repeat ending section"
+        },
+        {
+            "glyph": "]",
+            "jianpu representation": "end repeat ending section",
+            "western definition": "end repeat ending section"
+        }
+    ]
+}
