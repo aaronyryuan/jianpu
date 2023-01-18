@@ -3,113 +3,113 @@
         {
             "glyph": "0",
             "jianpu representation": "0",
-            "western definition": "rest"
+            "definition": "rest"
         },
         {
             "glyph": "1",
             "jianpu representation": "1",
-            "western definition": "ionian do"
+            "definition": "ionian do"
         },
         {
             "glyph": "2",
             "jianpu representation": "2",
-            "western definition": "ionian re"
+            "definition": "ionian re"
         },
         {
             "glyph": "3",
             "jianpu representation": "3",
-            "western definition": "ionian mi"
+            "definition": "ionian mi"
         },
         {
             "glyph": "4",
             "jianpu representation": "4",
-            "western definition": "ionian fa"
+            "definition": "ionian fa"
         },
         {
             "glyph": "5",
             "jianpu representation": "5",
-            "western definition": "ionian so"
+            "definition": "ionian so"
         },
         {
             "glyph": "6",
             "jianpu representation": "6",
-            "western definition": "ionian la"
+            "definition": "ionian la"
         },
         {
             "glyph": "7",
             "jianpu representation": "7",
-            "western definition": "ionian ti"
+            "definition": "ionian ti"
         }
     ],
     "note pitch modifiers":[
         {
             "glyph": "#",
             "jianpu representation": "#",
-            "western definition": "sharp"
+            "definition": "sharp"
         },
         {
             "glyph": "b",
             "jianpu representation": "b",
-            "western definition": "flat"
+            "definition": "flat"
         },
         {
             "glyph": "+",
             "jianpu representation": "dot above note",
-            "western definition": "octave up"
+            "definition": "octave up"
         },
         {
             "glyph": "-",
             "jianpu representation": "dot below note",
-            "western definition": "octave down"
+            "definition": "octave down"
         }
     ],
     "note duration modifiers": [
         {
             "glyph": ">",
             "jianpu representation": "dash centered on beat",
-            "western definition": "hold for another beat"
+            "definition": "hold for another beat"
         },
         {
             "glyph": ".",
             "jianpu representation": "dot next to node",
-            "western definition": "hold for another half beat"
+            "definition": "hold for another half beat"
         },
         {
             "glyph": "/",
             "jianpu representation": "line above note",
-            "western definition": "halve the time duration"
+            "definition": "halve the time duration"
         },
         {
             "glyph": "t",
             "jianpu representation": "tie",
-            "western definition": "tie"
+            "definition": "tie"
         }
     ],
     "control structures": [
         {
             "glyph": ",",
             "jianpu representation": "bar line",
-            "western definition": "bar line"
+            "definition": "bar line"
         },
         {
             "glyph": "|:",
             "jianpu representation": "start repeat",
-            "western definition": "start repeat"
+            "definition": "start repeat"
         },
         {
             "glyph": ":|",
             "jianpu representation": "end repeat",
-            "western definition": "end repeat"
+            "definition": "end repeat"
         },
         {
             "glyph": "[",
             "jianpu representation": "start repeat ending section",
-            "western definition": "start repeat ending section"
+            "definition": "start repeat ending section"
         },
         {
             "glyph": "]",
             "jianpu representation": "end repeat ending section",
-            "western definition": "end repeat ending section"
+            "definition": "end repeat ending section"
         }
     ]
 }
