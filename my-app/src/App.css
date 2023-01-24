@@ -1,0 +1,60 @@
+.App-container {
+  background-color: #2c4068;
+  margin: 2%;
+}
+
+.title-input {
+  color: rgb(164, 193, 208);
+  font-size: 2em;
+  background: transparent;
+  border: none;
+  text-align: center;
+  padding: .25em;
+  width:fill;
+}
+
+.config-input {
+  color: rgb(164, 193, 208);
+  background: transparent;
+  border: none;
+  text-align: center;
+  padding: .25em;
+  width:3em;
+  margin-right: 1em;
+  margin-bottom: 1em;
+}
+
+.jianpu {
+  color: rgb(119, 208, 255);
+  background: transparent;
+  border: none;
+  text-align: center;
+  padding: .25em;
+  width:fill;
+}
+
+.sheet {
+  width: full;
+  height: 100vh;
+  background-color: #1e2c47;
+  padding: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+
+.note-input {
+  color: rgb(164, 193, 208);
+  background-color: #2c4068;
+  border: none;
+  width:fill;
+}
+
+.note-display {
+  color: rgb(119, 208, 255);
+  font-size: 1.5em;
+  background: transparent;
+  border: none;
+  text-align: start;
+}

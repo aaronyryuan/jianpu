@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from typing import List
-from midiutil import MIDIFile
+from midiutil.MidiFile import MIDIFile
 import re
 import jpglyphs
 
